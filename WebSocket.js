@@ -60,7 +60,7 @@ define(function (require) {
 			return hub.on.apply(hub, arguments);
 		};
 
-		this.emit = function (message) {
+		this.send = function (message) {
 			if (!socket || state !== WebSocket.OPEN) {
 				return;
 			}

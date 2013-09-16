@@ -102,7 +102,7 @@ define(function () {
 			return hub.on.apply(hub, arguments);
 		};
 
-		this.emit = function (message) {
+		this.send = function (message) {
 			if (state === LongPoll.CLOSED) {
 				return;
 			}
