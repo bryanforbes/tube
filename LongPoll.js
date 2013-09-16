@@ -50,7 +50,7 @@ define(function () {
 
 		options = options || {};
 
-		this.transport = options.transport || request;
+		this.transport = options.transport || request.post;
 
 		this.get = function (name) {
 			if (name === 'state') {
