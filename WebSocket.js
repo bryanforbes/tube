@@ -1,7 +1,9 @@
 define(function (require) {
 	var has = require('./has'),
 		Evented = require('dojo/Evented'),
-		BrowserWebSocket = this[has('websocket')];
+		BrowserWebSocket = (function () {
+			return this[has('websocket')];
+		})();
 
 	function WebSocket(url, options) {
 		var hub = new Evented(),
